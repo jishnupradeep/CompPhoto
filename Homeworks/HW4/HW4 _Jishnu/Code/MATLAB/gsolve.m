@@ -50,7 +50,7 @@ for i=1:n-2         %% Include the smoothness equations
   k=k+1;
 end
 
-x = A\b;            %% Solve the system using SVD
+x = A\b;  %% Solve the system using SVD
 
 g = x(1:n);
 lE = x(n+1:size(x,1));
