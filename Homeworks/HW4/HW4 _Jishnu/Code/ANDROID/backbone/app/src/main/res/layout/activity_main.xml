@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc" tools:context=".MainActivity"
+    android:id="@+id/main_frame">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:weightSum="5">
+
+
+
+        <SurfaceView
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:id="@+id/cameraPreview"
+
+            android:layout_weight="4"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="JpgCapture"
+                android:id="@+id/jpgButton"
+                android:clickable="true"
+                android:enabled="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="RawCapture"
+                android:id="@+id/rawButton"
+                android:clickable="true"
+                android:enabled="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="ChangeCamera"
+                android:id="@+id/changeCamButton" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="Flash/NoFlash"
+                android:id="@+id/flashButton" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="HDR"
+                android:id="@+id/hdrButton" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="Focal Stack"
+                android:id="@+id/focalStackButton"
+                android:enabled="true"
+                android:clickable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
